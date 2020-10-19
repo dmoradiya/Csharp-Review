@@ -85,6 +85,32 @@ namespace CSharpReview_4Point2
 
             Console.WriteLine($"The number entered is {userInput}, it is {output}.");
 
+            // Initialize, Test, Process, Modify
+
+            // Pre-Test Loops. Do not run at all if the condition is false.
+            for (int x = 1 /* Initialize */ ; x <= userInput /* Test  */; x++ /* Modify */)
+            {
+                // Process
+                Console.WriteLine(x);
+            }
+
+            int y = 1; // Initialize
+            while (y <= userInput) // Test
+            {
+                Console.WriteLine(y); // Process
+                y++; //Modify
+            }
+
+
+            // Post-Test Loop. Always runs at least once, even if the condition is false.
+            int z = 1; // Initialize
+            do
+            {
+                Console.WriteLine(z); // Process
+                z++; // Modify
+            }
+            while (z <= userInput); // Test
+
 
 
             // Exit point of programs in C#.

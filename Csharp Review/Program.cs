@@ -116,20 +116,19 @@ namespace CSharpReview_4Point2
 
 
 
-            // Arrays in C# are fixed-length collections of items.
-
-            // Initialize an array of length 5.
-            // The first element will have index 0, second index 1, up to fifth index 4.
-            int[] intArray = new int[] { 5, 3, 10, 12, 42 };
-
-            // If we want to set it, just like most other languages, we can set an element by assigning an index.
-            intArray[3] = 10;
+           int[] intArray = new int[GetInt("Please enter a number of integers to store: ")];
 
             for (int i = 0; i < intArray.Length; i++)
             {
-                Console.WriteLine(intArray[i]);
+                intArray[i] = GetInt($"Please enter integer #{i + 1}: ");
             }
 
+            // foreach will loop over every item in a collection, however they are typically treated as readonly (with "normal" data types anyways).
+            foreach(int integer in intArray)
+            {
+                Console.WriteLine(integer);
+            }
+        
 
              /*
             static: Tells C# to only keep one copy of the method in memory (important for OOP).
